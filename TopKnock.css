@@ -1,0 +1,84 @@
+body {
+	background-image: url("bg1.jpg");
+	background-size: cover;
+}
+
+.menu {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.menu-icon {
+	height: 30px;
+	width: 30px;
+	position: relative;
+	z-index: 2;
+	cursor: pointer;
+	display: block;
+}
+
+.menu-icon__line {
+	height: 2px;
+	width: 30px;
+	display: block;
+	background-color: #fff;
+	margin-bottom: 7px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.menu-icon__line-left {
+	width: 30px;
+	transition: width 0.2s ease, transform 0.2s ease;
+	transform-origin: left center;
+}
+
+.menu-icon__line-right {
+	width: 30px;
+	float: right;
+	transition: width 0.2s ease, transform 0.2s ease;
+	transform-origin: right center;
+}
+
+.menu-icon:hover .menu-icon__line-left {
+	width: 30px;
+	transform: translateX(7.5px);
+}
+
+.menu-icon:hover .menu-icon__line-right {
+	width: 30px;
+	transform: translateX(-7.5px);
+	transform: scaleX(30px);
+}
+
+.dropdown {
+	position: absolute;
+	display: none;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	padding: 10px;
+	top: 30px;
+	left: 0;
+	z-index: 1;
+}
+
+.dropdown a {
+	display: block;
+	color: #000;
+	font-size: 16px;
+	padding: 5px;
+	text-decoration: none;
+}
+
+.dropdown a:hover {
+	background-color: #f5f5f5;
+}
+
+.menu.clicked .dropdown {
+	display: block;
+}
+
+.hover-target:hover .menu-icon__line {
+	width: 12px;
+}

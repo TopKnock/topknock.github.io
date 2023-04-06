@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hover-to-open menu</title>
+	<link rel="stylesheet" type="text/css" href="TopKnock.css">
+	<link rel="icon" type="png" href="TK_logo.png">
+</head>
+<body>
+	<div class="menu">
+		<div class="menu-icon hover-target">
+			<span class="menu-icon__line menu-icon__line-left"></span>
+			<span class="menu-icon__line"></span>
+			<span class="menu-icon__line menu-icon__line-right"></span>
+		</div>
+		<ul class="dropdown">
+			<li><a href="#">Menu Item 1</a></li>
+			<li><a href="#">Menu Item 2</a></li>
+			<li><a href="#">Menu Item 3</a></li>
+		</ul>
+	</div>
+
+	<script>
+		var menu = document.querySelector('.menu');
+		menu.addEventListener('click', function() {
+			menu.classList.toggle('clicked');
+		});
+	</script>
+</body>
+</html>
